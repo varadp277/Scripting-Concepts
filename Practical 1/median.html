@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>median,maximum,minimum</title>
+</head>
+
+<body>
+    <script>
+       function sort(a, b, c) {
+    let max, mid, min;
+
+    if (a >= b && a >= c) {
+        max = a;
+        if (b >= c) {
+            mid = b;
+            min = c;
+        } else {
+            mid = c;
+            min = b;
+        }
+    }
+    else if (b >= a && b >= c) {
+        max = b;
+        if (a >= c) {
+            mid = a;
+            min = c;
+        } else {
+            mid = c;
+            min = a;
+        }
+    }
+    else {
+        max = c;
+        if (a >= b) {
+            mid = a;
+            min = b;
+        } else {
+            mid = b;
+            min = a;
+        }
+    }
+
+    console.log("Maximum:", max);
+    console.log("Median:", mid);
+    console.log("Minimum:", min);
+}
+
+let a = parseInt(prompt("Enter the first number"));
+let b = parseInt(prompt("Enter the second number"));
+let c = parseInt(prompt("Enter the third number"));
+
+sort(a, b, c);
+
+</script>
+</body>
+
+</html>

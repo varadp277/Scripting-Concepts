@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operation</title>
+</head>
+<body>
+    <h2>Array Operations:</h2>
+
+    <script>
+        let arr=[10,20,30,40,50];
+
+        document.write("<h3>Orignal Array: </h3>");
+        document.write(arr,"<br><br>")
+
+        //1 . push
+        arr.push(60);
+        document.write("After POP 60: ",arr,"<br><br>");
+
+        //2 . pop
+        arr.pop();
+        document.write("After pop element: ",arr,"<br><br>")
+
+        // 3.unshift
+        arr.unshift(60);
+        document.write("Add 60 at begining: ",arr,"<br><br>");
+
+        //4 shift
+        arr.shift();
+        document.write("Remove begning element: ",arr,"<br><br>")
+
+         // 5.length
+        len=arr.length;
+        document.write("Length of an array: ",len,"<br><br>")
+
+         // 6.unshift
+        ind=arr.indexOf(50);
+        document.write("Index of 50: ",ind,"<br><br>")
+
+         // 7.concat
+         let arr2=[70,80]
+         let newarr=arr.concat(arr2)
+        document.write("After Concat: : ",newarr,"<br><br>")
+
+        //8.join
+        document.write("After join('-'): ",arr.join("-"),"<br><br>");
+
+        //9. for each
+        document.write("using for each ():<br>");
+        arr.forEach(function(value){
+            document.write(value,"<br>");
+        })
+
+
+        
+    </script>
+</body>
+</html>
