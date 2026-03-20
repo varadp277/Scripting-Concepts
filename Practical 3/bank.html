@@ -1,0 +1,52 @@
+ <!-- Define class bankaccount with data science amount holder name & withdraw money. Display the account details & update
+balance on web page -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Account</title>
+</head>
+<body>
+
+<h2>Bank Account Details</h2>
+<p id="details"></p>
+
+<input type="number" id="withdrawAmount" placeholder="Enter amount">
+<button onclick="withdrawMoney()">Withdraw</button>
+
+<script>
+    class BankAccount {
+        constructor(name, balance) {
+            this.name = name;
+            this.balance = balance;
+        }
+
+        withdraw(amount) {
+            if (amount > this.balance) {
+                alert("Not enough balance!");
+            } else {
+                this.balance -= amount;
+                alert("Money withdrawn!");
+            }
+        }
+
+        showDetails() {
+            document.getElementById("details").innerHTML =
+                "Name: " + this.name + "<br>" +
+                "Balance: ₹" + this.balance;
+        }
+    }
+
+    let account = new BankAccount("Varad Patil", 5000);
+
+    account.showDetails();
+
+    function withdrawMoney() {
+        let amount = document.getElementById("withdrawAmount").value;
+        account.withdraw(amount);
+        account.showDetails();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- Mouse Event
+    Change background color when mouse is clickes on webpage -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Event</title>
+</head>
+<body onclick="changeColor()">
+
+<h2 style="text-align:center;">Click anywhere on the page to change background color</h2>
+
+<script>
+    function changeColor() {
+        let colors = ["red", "blue", "green", "yellow", "pink", "purple"];
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[randomIndex];
+    }
+</script>
+
+</body>
+</html>

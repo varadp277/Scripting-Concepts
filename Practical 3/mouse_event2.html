@@ -1,0 +1,24 @@
+<!-- Mouse Event
+ Display a msg mouse is move over button -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over Event</title>
+</head>
+<body style="text-align:center; margin-top:50px;">
+
+<h2>Move mouse over the button</h2>
+
+<button onmouseover="showMessage()">Hover Over Me</button>
+
+<p id="message"></p>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").innerHTML = "Mouse is over the button!";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- Mouse event
+ Display & alert message when the more button is double clicked -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Double Click Mouse Event</title>
+</head>
+<body style="text-align:center; margin-top:50px;">
+
+<h2>Double Click the Button</h2>
+
+<button ondblclick="showMessage()">Double Click Me</button>
+
+<p id="msg"></p>
+
+<script>
+    function showMessage() {
+        document.getElementById("msg").innerHTML = "Button was double clicked!";
+        alert("You double clicked the button!");
+    }
+</script>
+
+</body>
+</html>
