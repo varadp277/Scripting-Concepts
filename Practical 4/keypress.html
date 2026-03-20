@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keypress Example</title>
+</head>
+<body>
+
+<h2>Press any key on keyboard</h2>
+<p id="output">Key pressed: None</p>
+
+<script>
+    // Keypress event
+    document.addEventListener("keypress", function(event) {
+        let key = event.key;   // Get pressed key
+        document.getElementById("output").innerHTML = "Key pressed: " + key;
+    });
+</script>
+
+</body>
+</html>
